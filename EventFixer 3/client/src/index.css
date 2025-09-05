@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(210, 40%, 98%);
+  --foreground: hsl(222, 84%, 5%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(222, 84%, 5%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(222, 84%, 5%);
+  --primary: hsl(221, 83%, 53%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(210, 40%, 96%);
+  --secondary-foreground: hsl(222, 84%, 5%);
+  --muted: hsl(210, 40%, 96%);
+  --muted-foreground: hsl(215, 16%, 47%);
+  --accent: hsl(210, 40%, 96%);
+  --accent-foreground: hsl(222, 84%, 5%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --border: hsl(214, 32%, 91%);
+  --input: hsl(214, 32%, 91%);
+  --ring: hsl(221, 83%, 53%);
+  --chart-1: hsl(221, 83%, 53%);
+  --chart-2: hsl(160, 84%, 36%);
+  --chart-3: hsl(42, 93%, 56%);
+  --chart-4: hsl(147, 79%, 42%);
+  --chart-5: hsl(341, 75%, 51%);
+  --sidebar: hsl(180, 7%, 97%);
+  --sidebar-foreground: hsl(210, 25%, 8%);
+  --sidebar-primary: hsl(221, 83%, 53%);
+  --sidebar-primary-foreground: hsl(0, 0%, 100%);
+  --sidebar-accent: hsl(212, 51%, 93%);
+  --sidebar-accent-foreground: hsl(221, 83%, 53%);
+  --sidebar-border: hsl(205, 25%, 91%);
+  --sidebar-ring: hsl(221, 83%, 53%);
+  --font-sans: Inter, system-ui, -apple-system, sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: Menlo, monospace;
+  --radius: 0.75rem;
+  --shadow-2xs: 0px 2px 0px 0px hsl(221, 83%, 53% / 0.05);
+  --shadow-xs: 0px 2px 0px 0px hsl(221, 83%, 53% / 0.05);
+  --shadow-sm: 0px 2px 0px 0px hsl(221, 83%, 53% / 0.05), 0px 1px 2px -1px hsl(221, 83%, 53% / 0.1);
+  --shadow: 0px 2px 0px 0px hsl(221, 83%, 53% / 0.05), 0px 1px 2px -1px hsl(221, 83%, 53% / 0.1);
+  --shadow-md: 0px 2px 0px 0px hsl(221, 83%, 53% / 0.05), 0px 2px 4px -1px hsl(221, 83%, 53% / 0.1);
+  --shadow-lg: 0px 2px 0px 0px hsl(221, 83%, 53% / 0.05), 0px 4px 6px -1px hsl(221, 83%, 53% / 0.1);
+  --shadow-xl: 0px 2px 0px 0px hsl(221, 83%, 53% / 0.05), 0px 8px 10px -1px hsl(221, 83%, 53% / 0.1);
+  --shadow-2xl: 0px 2px 0px 0px hsl(221, 83%, 53% / 0.05);
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+
+  /* Custom luxury colors */
+  --deep-sapphire: hsl(222, 84%, 10%);
+  --royal-blue: hsl(221, 83%, 39%);
+  --electric-blue: hsl(221, 91%, 62%);
+  --emerald: hsl(160, 84%, 39%);
+  --pearl: hsl(210, 40%, 98%);
+  --platinum: hsl(210, 40%, 91%);
+  --charcoal: hsl(215, 25%, 27%);
+}
+
+.dark {
+  --background: hsl(0, 0%, 0%);
+  --foreground: hsl(200, 7%, 91%);
+  --card: hsl(228, 10%, 10%);
+  --card-foreground: hsl(0, 0%, 85%);
+  --popover: hsl(0, 0%, 0%);
+  --popover-foreground: hsl(200, 7%, 91%);
+  --primary: hsl(204, 88%, 53%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(195, 15%, 95%);
+  --secondary-foreground: hsl(210, 25%, 8%);
+  --muted: hsl(0, 0%, 9%);
+  --muted-foreground: hsl(210, 3%, 46%);
+  --accent: hsl(206, 70%, 8%);
+  --accent-foreground: hsl(204, 88%, 53%);
+  --destructive: hsl(356, 91%, 54%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(210, 5%, 15%);
+  --input: hsl(208, 28%, 18%);
+  --ring: hsl(221, 83%, 53%);
+  --chart-1: hsl(221, 83%, 53%);
+  --chart-2: hsl(160, 84%, 36%);
+  --chart-3: hsl(42, 93%, 56%);
+  --chart-4: hsl(147, 79%, 42%);
+  --chart-5: hsl(341, 75%, 51%);
+  --sidebar: hsl(228, 10%, 10%);
+  --sidebar-foreground: hsl(0, 0%, 85%);
+  --sidebar-primary: hsl(221, 83%, 53%);
+  --sidebar-primary-foreground: hsl(0, 0%, 100%);
+  --sidebar-accent: hsl(206, 70%, 8%);
+  --sidebar-accent-foreground: hsl(204, 88%, 53%);
+  --sidebar-border: hsl(206, 16%, 26%);
+  --sidebar-ring: hsl(221, 83%, 53%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .app-container {
+    max-width: 414px;
+    margin: 0 auto;
+    background: hsl(0, 0%, 100%);
+    min-height: 100vh;
+    position: relative;
+    box-shadow: 0 0 50px hsl(222, 84%, 5% / 0.1);
+  }
+
+  .glassmorphism {
+    background: hsl(0, 0%, 100% / 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid hsl(0, 0%, 100% / 0.3);
+  }
+
+  .gradient-primary {
+    background: linear-gradient(135deg, var(--royal-blue) 0%, var(--electric-blue) 100%);
+  }
+
+  .gradient-emerald {
+    background: linear-gradient(135deg, var(--emerald) 0%, hsl(160, 84%, 45%) 100%);
+  }
+
+  .animate-pulse-custom {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .bus-marker {
+    animation: busMarkerPulse 2s infinite;
+  }
+
+  .chat-message {
+    animation: messageSlide 0.3s ease-out;
+  }
+
+  .nav-item.active {
+    background: var(--primary);
+    color: var(--primary-foreground);
+    transform: scale(1.05);
+  }
+}
+
+@layer utilities {
+  .screen-transition {
+    animation: slideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes busMarkerPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes messageSlide {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
